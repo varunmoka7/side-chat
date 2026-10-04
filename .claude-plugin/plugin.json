@@ -1,0 +1,80 @@
+{
+  "name": "btw-chat",
+  "version": "0.1.0",
+  "description": "A side chat for Claude Code, like the desktop app's /btw. Ask follow-up questions in a pane without touching the main conversation, or call an agent with /btw @name. Independent mod, not made by Anthropic.",
+  "author": {
+    "name": "Varun Moka",
+    "url": "https://github.com/varunmoka7"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/varunmoka7/btw-chat",
+  "repository": "https://github.com/varunmoka7/btw-chat",
+  "keywords": [
+    "side-chat",
+    "btw",
+    "claude-code",
+    "claude-code-plugin",
+    "slash-command",
+    "agents",
+    "productivity"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "yourColor": {
+      "type": "string",
+      "title": "Your text color",
+      "description": "Colour of your questions in the side chat.",
+      "options": [
+        "cyan",
+        "green",
+        "yellow",
+        "magenta",
+        "blue",
+        "red",
+        "white",
+        "gray"
+      ],
+      "default": "cyan"
+    },
+    "claudeColor": {
+      "type": "string",
+      "title": "Claude's text color",
+      "description": "Colour of Claude's answers in the side chat.",
+      "options": [
+        "cyan",
+        "green",
+        "yellow",
+        "magenta",
+        "blue",
+        "red",
+        "white",
+        "gray"
+      ],
+      "default": "white"
+    },
+    "instructions": {
+      "type": "string",
+      "title": "Side chat instructions",
+      "description": "Your own instructions for the side chat, added to every question. Example: answer in plain words, two lines at most, no code unless asked.",
+      "default": ""
+    },
+    "takeKeyboard": {
+      "type": "boolean",
+      "title": "Side chat takes the keyboard when opened",
+      "description": "On: /btw puts the cursor in the side chat so you can type at once; press Esc to go back to the main prompt. Off: the main prompt keeps the keyboard, and dropped screenshots stay there; ask with /btw <question>.",
+      "default": true
+    },
+    "agentModel": {
+      "type": "string",
+      "title": "Side chat agent model",
+      "description": "Model for agents called with /btw @name. default: the agent's own model. Change it on the fly by typing /model haiku in the pane.",
+      "options": [
+        "default",
+        "haiku",
+        "sonnet",
+        "opus"
+      ],
+      "default": "default"
+    }
+  }
+}

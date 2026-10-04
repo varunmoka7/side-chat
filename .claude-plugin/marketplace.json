@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "btw-chat",
+  "description": "A side chat for Claude Code, like the desktop app's /btw.",
+  "owner": {
+    "name": "Varun Moka",
+    "url": "https://github.com/varunmoka7"
+  },
+  "plugins": [
+    {
+      "name": "btw-chat",
+      "description": "Ask follow-up questions in a side pane without touching the main conversation, or call an agent with /btw @name. Replaces the built-in /btw while installed.",
+      "author": {
+        "name": "Varun Moka",
+        "url": "https://github.com/varunmoka7"
+      },
+      "source": "./",
+      "homepage": "https://github.com/varunmoka7/btw-chat",
+      "category": "productivity",
+      "tags": [
+        "side-chat",
+        "btw",
+        "agents",
+        "slash-command"
+      ]
+    }
+  ]
+}
