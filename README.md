@@ -6,6 +6,10 @@ stays untouched.
 
 This is an independent mod. It is not made by Anthropic.
 
+![The btw-chat pane: a question, the answer under a divider, and the follow-up input](assets/pane.png)
+
+*The pane in a VS Code terminal on macOS. Your question sits above the divider, Claude's answer below it, and the input at the bottom takes the next question.*
+
 **Read this before installing:** while btw-chat is enabled, `/btw` opens this
 pane instead of the built-in one. Disable the plugin to get the built-in
 `/btw` back.
