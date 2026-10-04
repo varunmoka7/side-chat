@@ -27,6 +27,15 @@ pane instead of the built-in one. Disable the plugin to get the built-in
 - In the pane, type `/clear` to wipe it and `/close` to hide it. `Esc` goes
   back to the main prompt.
 
+## Requirements
+
+Claude Code with plugin function hooks (mods). Tested on 2.1.289, where the
+mod loads with no extra setting: I ran it from a clean checkout with
+`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` unset and `/side clear` answered. Builds
+around 2.1.270 needed `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1` before any mod would
+load, so if `/btw` does nothing on an older build, set that and restart.
+Function hooks are early access and the API changes between releases.
+
 ## Install
 
 ```
@@ -53,6 +62,13 @@ macOS). The unit tests pass, but some parts have not been seen working live:
 
 An agent started with `@name` runs with that agent's own tools and your
 session's permission mode. It can edit files if you ask it to.
+
+## Similar mods
+
+[JayDoubleu/aside](https://github.com/JayDoubleu/aside) is the same idea, a
+read-only side chat answered by a fork of the session, with its own `/aside`
+command and a cost footer on each answer. btw-chat adds the `/btw` takeover,
+`@agent` calls, running-agent context, a model switch and color settings.
 
 ## Tests
 
