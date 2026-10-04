@@ -6,11 +6,11 @@ test('pane draws a follow-up input', async ($, on) => {
     return <Box />
   })
   const m = await $.ui.mount({
-    plugin: 'btw-chat',
+    plugin: 'side-chat',
     surface: 'terminal',
     component: 'Pane',
     props: {},
-    requestId: 'btw-chat',
+    requestId: 'side-chat',
   } as never)
   expect(await m.find({ key: 'side-input' })).toBeTruthy()
 })

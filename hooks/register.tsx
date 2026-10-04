@@ -3,10 +3,10 @@ import type { EngineInterface, Register } from 'claude-code'
 
 import type { SideTurn } from '../types'
 
-const turns = atom({ plugin: 'btw-chat', key: 'turns' } as const, [] as SideTurn[])
-const pending = atom({ plugin: 'btw-chat', key: 'pending' } as const, '')
-const model = atom({ plugin: 'btw-chat', key: 'model' } as const, '')
-const PANE = 'btw-chat'
+const turns = atom({ plugin: 'side-chat', key: 'turns' } as const, [] as SideTurn[])
+const pending = atom({ plugin: 'side-chat', key: 'pending' } as const, '')
+const model = atom({ plugin: 'side-chat', key: 'model' } as const, '')
+const PANE = 'side-chat'
 const MODELS = ['default', 'haiku', 'sonnet', 'opus']
 
 // Set from the instructions setting when the mod loads.
@@ -44,7 +44,7 @@ async function askAgent($: EngineInterface, name: string, q: string) {
     subagentType: name,
     ...(chosen !== 'default' ? { model: chosen } : {}),
     description: 'side chat question',
-    prompt: `A btw-chat question, answer in at most 8 short lines of plain text: ${q}`,
+    prompt: `A side-chat question, answer in at most 8 short lines of plain text: ${q}`,
   })
   if (started.deny !== undefined || !started.agentId) {
     return finish($, label, `Could not start ${name}: ${started.deny ?? 'no agent id'}.`)
@@ -105,7 +105,7 @@ export const register: Register = (on, options) => {
   takeKeyboard = options.takeKeyboard !== false
   defaultModel = String(options.agentModel ?? 'default')
 
-  // Hand a started btw-chat agent its answer; every hook sees a subagent's turn, so pass the event on.
+  // Hand a started side-chat agent its answer; every hook sees a subagent's turn, so pass the event on.
   on('turn.complete', async ($, e, next) => {
     if (e.agentId && e.reason === 'answer') {
       const done = waiting.get(e.agentId)

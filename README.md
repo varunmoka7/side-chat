@@ -1,4 +1,4 @@
-# btw-chat
+# side-chat
 
 A side chat for Claude Code, like the one in the Claude desktop app. Ask
 follow-up questions in a pane next to your work and the main conversation
@@ -6,18 +6,18 @@ stays untouched.
 
 This is an independent mod. It is not made by Anthropic.
 
-![The btw-chat pane: a question, the answer under a divider, and the follow-up input](assets/pane.png)
+![The side-chat pane: a question, the answer under a divider, and the follow-up input](assets/pane.png)
 
 *The pane in a VS Code terminal on macOS. Your question sits above the divider, Claude's answer below it, and the input at the bottom takes the next question.*
 
-**Read this before installing:** while btw-chat is enabled, `/btw` opens this
+**Read this before installing:** while side-chat is enabled, `/btw` opens this
 pane instead of the built-in one. Disable the plugin to get the built-in
 `/btw` back.
 
 ## What it does
 
-- `/btw` opens the pane. Type in it, or ask from the main prompt with
-  `/btw your question`. `/side` is a short alias.
+- `/btw` and `/side` both open the pane. Type in it, or ask from the main
+  prompt with `/btw your question` or `/side your question`.
 - Answers come from a fork of your current session, so the side chat knows
   your conversation and your CLAUDE.md files. It uses no tools and never
   changes the main thread.
@@ -43,13 +43,13 @@ Function hooks are early access and the API changes between releases.
 ## Install
 
 ```
-/plugin marketplace add varunmoka7/btw-chat
-/plugin install btw-chat@btw-chat
+/plugin marketplace add varunmoka7/side-chat
+/plugin install side-chat@side-chat
 ```
 
 ## Settings
 
-Open `/config` and look for btw-chat: your text color, Claude's text color,
+Open `/config` and look for side-chat: your text color, Claude's text color,
 your own instructions for the side chat, whether the pane takes the keyboard
 when it opens, and the default model for agent calls.
 
@@ -71,7 +71,7 @@ session's permission mode. It can edit files if you ask it to.
 
 [JayDoubleu/aside](https://github.com/JayDoubleu/aside) is the same idea, a
 read-only side chat answered by a fork of the session, with its own `/aside`
-command and a cost footer on each answer. btw-chat adds the `/btw` takeover,
+command and a cost footer on each answer. side-chat adds the `/btw` takeover,
 `@agent` calls, running-agent context, a model switch and color settings.
 
 ## Tests
