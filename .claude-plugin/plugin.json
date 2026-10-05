@@ -1,7 +1,7 @@
 {
   "name": "side-chat",
   "version": "0.1.0",
-  "description": "A side chat for Claude Code, like the desktop app's /btw. Ask follow-up questions in a pane without touching the main conversation, or call an agent with /btw @name. Independent mod, not made by Anthropic.",
+  "description": "Ask Claude a side question in a pane next to your work. The main conversation never sees it. Works like the desktop app's /btw.",
   "author": {
     "name": "Varun Moka",
     "url": "https://github.com/varunmoka7"
