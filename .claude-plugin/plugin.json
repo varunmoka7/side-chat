@@ -10,13 +10,15 @@
   "homepage": "https://github.com/varunmoka7/side-chat",
   "repository": "https://github.com/varunmoka7/side-chat",
   "keywords": [
-    "side-chat",
+    "agents",
     "btw",
     "claude-code",
+    "claude-code-mod",
     "claude-code-plugin",
-    "slash-command",
-    "agents",
-    "productivity"
+    "function-hooks",
+    "productivity",
+    "side-chat",
+    "slash-command"
   ],
   "types": "./types/index.d.ts",
   "userConfig": {
