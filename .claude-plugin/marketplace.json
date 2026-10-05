@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "side-chat",
-  "description": "A side chat for Claude Code, like the desktop app's /btw.",
+  "description": "Ask Claude a side question in a pane next to your work. The main conversation never sees it. Works like the desktop app's /btw.",
   "owner": {
     "name": "Varun Moka",
     "url": "https://github.com/varunmoka7"
