@@ -1,10 +1,19 @@
 # side-chat
 
-A side chat for Claude Code, like the one in the Claude desktop app. Ask
-follow-up questions in a pane next to your work and the main conversation
-stays untouched.
+Ask Claude a side question without adding it to the main conversation.
 
-This is an independent mod. It is not made by Anthropic.
+Halfway through a task you want to know what a flag does, or why Claude
+chose one approach over another. Ask in the main prompt and the question and
+its answer become part of the conversation Claude works from. side-chat
+opens a pane next to your work instead. The answer comes from a fork of your
+session, so it knows what you have been doing, and nothing you ask there
+reaches the main thread.
+
+The same pane takes `/btw @name your question`, which sends the question to
+one of your agents and shows its answer when it finishes.
+
+It works like the side chat in the Claude desktop app. This is an
+independent mod, not made by Anthropic.
 
 ![The side-chat pane: a question, the answer under a divider, and the follow-up input](assets/pane.png)
 
